@@ -47,5 +47,21 @@
 
     //Clear the value of the input field
     addInput.value = "";
+
+    //Add a click even listener to the edit button
+    toDoEdit.addEventListener("click", function() {
+      //Show a prompt to edit the to-do and save it
+      var newToDo;
+
+      newToDo = prompt("Edit to-do:", toDoSpan.textContent);
+
+      //Check if new to-do is valid or not
+      if (!newToDo.trim()) {
+        return;
+      }
+
+      //Update the display with the new to-do
+      toDoSpan.textContent = newToDo.trim();
+    });
   });
 })();
