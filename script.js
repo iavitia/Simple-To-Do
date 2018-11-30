@@ -63,5 +63,18 @@
       //Update the display with the new to-do
       toDoSpan.textContent = newToDo.trim();
     });
+
+    //Add a click event listener to the delete button
+    toDoDelete.addEventListener("click", function() {
+      //Show a confirmation box and remove the <li> tag
+      var confirmation;
+
+      confirmation = confirm("Are you sure?");
+
+      // Check if deletion is confirmed or not
+      if (confirmation) {
+        toDoList.removeChild(toDoLi);
+      }
+    });
   });
 })();
